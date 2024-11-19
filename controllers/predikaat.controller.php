@@ -81,10 +81,10 @@ $vragen = getVragen();
 
 function insertText($vragen)
 {
-    foreach ($vragen as $data => $value) {
+    foreach ($vragen as $data => $value) : ?>
 
-        echo "Vraag #" . $data + 1 . ": " . $value['question'] . '</br>';
-        echo "<input type='text' name='antwoord" . $data + 1 . "' class='border rounded-lg p-2 w-64'></br>";
-    }
+        <p>Vraag #<?php echo $data + 1 ?> :  <?php echo $value['question'] ?> </br>
+        <input type='text' name='antwoord" . $data + 1 . "' class='border rounded-lg p-2 w-64'></br>
+    <?php endforeach;
 }
 submit($vragen);

@@ -1,5 +1,4 @@
 <?php require_once '../controllers/predikaat.controller.php' ?>
-<?php require_once '../database/seeder.php' ?>
 
 <h1>Predikaat</h1>
 
