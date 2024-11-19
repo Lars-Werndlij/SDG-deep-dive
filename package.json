@@ -1,0 +1,18 @@
+{
+  "name": "sdg-deep-dive",
+  "version": "1.0.0",
+  "description": "Deep Dive repo voor SDG",
+  "main": "index.js",
+  "directories": {
+    "lib": "lib"
+  },
+  "scripts": {
+    "watch": "npx tailwindcss -i ./resources/css/input.css -o ./public/css/output.css --watch",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Luuk J",
+  "license": "ISC",
+  "devDependencies": {
+    "tailwindcss": "^3.4.15"
+  }
+}
