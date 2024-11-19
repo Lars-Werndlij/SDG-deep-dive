@@ -5,6 +5,8 @@
 
 <a href='index.php?page=admin'>admin</a>
 
+<a href='index.php'>Home</a>
+
 <div class="container mx-auto p-6 columns-1 flex-col">
     
     <form method="post" class="flex justify-center mb-6" id="predikaatform">
