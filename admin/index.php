@@ -11,7 +11,6 @@
 
         ?>
         <table>
-
             <tr>
                 <th>Id</th>
                 <th>Bedrijf's naam</th>
@@ -28,40 +27,39 @@
                     <td><?php echo $value['activiteit'] ?></td>
                 </tr>
 
-        </table>
-
-    <?php endforeach; ?>
-
-    <?php if (isset($_GET['id'])) {
-
-        $id = $_GET['id'];
-
-        $sql = "SELECT * FROM antwoorden WHERE user_id = '$id'";
-        $result = $pdo->query($sql);
-        $answers = $result->fetchAll(PDO::FETCH_ASSOC); ?>
-
-        <h4>antwoorden predikaat van : <?php echo $_GET['naam'] ?></h4>
-
-
-        <table>
-
-            <tr>
-                <th>VraagId</th>
-                <th>Antwoord</th>
-                <th>Datum</th>
-            </tr>
-
-            <?php foreach ($answers as $data => $value) : ?>
-
-                <tr>
-                    <td><?php echo $value['question_id'] ?></td>
-                    <td><?php echo $value['answers'] ?></td>
-                    <td><?php echo $value['date'] ?></td>
-                </tr>
-
 
             <?php endforeach; ?>
-
         </table>
+        <?php if (isset($_GET['id'])) {
 
-    <?php } ?>
+            $id = $_GET['id'];
+
+            $sql = "SELECT * FROM antwoorden WHERE user_id = '$id'";
+            $result = $pdo->query($sql);
+            $answers = $result->fetchAll(PDO::FETCH_ASSOC); ?>
+
+            <h4>antwoorden predikaat van : <?php echo $_GET['naam'] ?></h4>
+
+
+            <table>
+
+                <tr>
+                    <th>VraagId</th>
+                    <th>Antwoord</th>
+                    <th>Datum</th>
+                </tr>
+
+                <?php foreach ($answers as $data => $value) : ?>
+
+                    <tr>
+                        <td><?php echo $value['question_id'] ?></td>
+                        <td><?php echo $value['answers'] ?></td>
+                        <td><?php echo $value['date'] ?></td>
+                    </tr>
+
+
+                <?php endforeach; ?>
+
+            </table>
+
+        <?php } ?>
