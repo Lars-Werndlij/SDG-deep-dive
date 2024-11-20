@@ -1,9 +1,10 @@
 <?php require_once '../controllers/predikaat.controller.php' ?>
-<?php require_once '../database/seeder.php' ?>
 
 <h1>Predikaat</h1>
 
 <a href='index.php?page=admin'>admin</a>
+
+<a href='index.php'>Home</a>
 
 <div class="container mx-auto p-6 columns-1 flex-col">
     
