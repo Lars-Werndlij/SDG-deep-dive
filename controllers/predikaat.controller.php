@@ -17,7 +17,6 @@ function submit($vragen)
     $pdo = dbConnect();
 
     if (isset($_POST['enter'])) {
-
         $bedrijf = $_POST['naam'];
         $contact = $_POST['contact'];
         $locatie = $_POST['locatie'];
@@ -72,7 +71,10 @@ function submit($vragen)
                 $statement->bindParam(':date', $date);
 
                 $statement->execute();
+                
             }
+            header("Location: index.php");
+            exit;
         }
     }
 }
@@ -82,9 +84,8 @@ $vragen = getVragen();
 function insertText($vragen)
 {
     foreach ($vragen as $data => $value) : ?>
-
-        <p>Vraag #<?php echo $data + 1 ?> :  <?php echo $value['question'] ?> </br>
-        <input type='text' name='antwoord" . $data + 1 . "' class='border rounded-lg p-2 w-64'></br>
+        <label class="p-8 text-xl font-bold justify-self-center text-white">Vraag #<?php echo $data + 1 ?> : <?php echo $value['question'] ?></label> </br>
+        <input type='text' name='antwoord<?php echo $data + 1 ?>' class='m-5 border rounded-lg p-2 w-9/12 bg-slate-200'></br>
     <?php endforeach;
 }
 submit($vragen);
