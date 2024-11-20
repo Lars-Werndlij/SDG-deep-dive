@@ -72,44 +72,62 @@
 
             function alert($msg)
             {
-                ?><script type='text/javascript'>alert('$msg');</script><?php
-            }
+            ?><script type='text/javascript'>
+                    alert('$msg');
+                </script><?php
+                        }
 
-            function insertVragen($pdo, $vraag)
-            {
-                $query = "INSERT INTO `questions`(`question`) 
+                        function insertVragen($pdo, $vraag)
+                        {
+                            $query = "INSERT INTO `questions`(`question`) 
             VALUES ('$vraag')";
-                $statement = $pdo->prepare($query);
-                $statement->execute();
-                alert('vraag is toegevoegd');
-            }
+                            $statement = $pdo->prepare($query);
+                            $statement->execute();
+                            alert('vraag is toegevoegd');
+                        }
 
-            if (isset($_POST['enter'])) {
-                $vraag = $_POST['vraag'];
-                insertVragen($pdo, $vraag);
-            }
+                        if (isset($_POST['enter'])) {
+                            $vraag = $_POST['vraag'];
+                            insertVragen($pdo, $vraag);
+                        }
 
-            function getVragen()
-            {
-                $pdo = dbConnect();
+                        function getVragen()
+                        {
+                            $pdo = dbConnect();
 
-                $sql = "SELECT * FROM questions";
-                $result = $pdo->query($sql);
-                $vragen = $result->fetchAll(PDO::FETCH_ASSOC);
+                            $sql = "SELECT * FROM questions";
+                            $result = $pdo->query($sql);
+                            $vragen = $result->fetchAll(PDO::FETCH_ASSOC);
 
-                return $vragen;
-            }
+                            return $vragen;
+                        }
 
-            $vragen = getVragen();
+                        $vragen = getVragen();
 
-            function insertText($vragen)
-            {
-                foreach ($vragen as $data => $value) : ?>
-                    <input type=submit value="Delete Vraag <?php echo $data + 1 ?>" id=<?php echo $data + 1 ?>name="submitdelete">
-                    <p>Vraag #<?php echo $data + 1 ?> : <?php echo $value['question'] ?><p>
-                <?php endforeach;
-            }
+                        function insertText($vragen)
+                        { ?>
 
-            insertText($vragen);
-                ?>
+                <table>
+
+                    <tr>
+                        <th>Vraag</th>
+                        <th> </th>
+                    </tr>
+
+                    <?php foreach ($vragen as $data => $value) : ?>
+
+                        <tr>
+                            <td>Vraag #<?php echo $data + 1 ?> : <?php echo $value['question'] ?></td>
+                            <td><input type=submit value="␡" id=<?php echo $data + 1 ?>name="submitdelete"></td>
+                        </tr>
+
+                    <?php endforeach; ?>
+
+                </table>
+
+            <?php
+                        }
+
+                        insertText($vragen);
+            ?>
         </form>
