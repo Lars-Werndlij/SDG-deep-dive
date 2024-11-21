@@ -1,6 +1,6 @@
 <?php require_once '../controllers/predikaat.controller.php' ?>
 <div class="bg-gradient-to-r from-teal-500 to-orange-400 h-80">
-    <h1 class="text-8xl font-extrabold justify-self-center self-center text-white pt-36">Predikaat</h1>
+    <h1 class="lg:text-8xl text-6xl font-extrabold justify-self-center self-center text-white pt-36">Predikaat</h1>
 </div>
 <!-- <a href='index.php?page=admin' class="bg-[#58AAE0] p-2 m-5 rounded-lg position-absolute">admin</a> -->
 
@@ -21,8 +21,7 @@
             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-white">
             <?php insertText($vragen); ?>
             <hr class="h-px my-8 bg-gray-200 border-0 dark:bg-white">
-            <input type=submit value="Submit" class="m-5 px-40
-             p-5 rounded ml-8 bg-[#071E4B] hover:bg-[#09255d] text-white text-xl" name="enter">
+            <input type=submit value="Submit" class="m-5 px-28 justify-self-center p-5 rounded ml-8 bg-[#071E4B] hover:bg-[#09255d] text-white text-xl" name="enter">
         </div>
     </form>
 
