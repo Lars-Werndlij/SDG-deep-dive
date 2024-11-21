@@ -1,2 +1,27 @@
 @tailwind base;
 @tailwind components;
+@tailwind components;
+@tailwind utilities;
+
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('../views/images/Roboto-Regular.ttf');
+}
+
+@font-face {
+    font-family: 'RobotoCondensed';
+    src: url('../../public/fonts/Roboto_Condensed/RobotoCondensed-VariableFont_wght.ttf');
+}
+
+robotoCon {
+    font-family: 'RobotoCondensed', sans-serif;
+}
+
+roboto {
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    color: #071E4B;
+}
