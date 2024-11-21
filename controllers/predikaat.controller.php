@@ -1,5 +1,4 @@
 <?php
-
 function getVragen()
 {
     $pdo = dbConnect();
@@ -28,7 +27,7 @@ function submit($vragen)
 
         if ($if == true) {
 
-            echo "dit bedrijf bestaat al";
+            echo "<script> alert('Dit bedrijf heeft al een predikaat ingeleverd');</script>";
         } else {
 
             if (isset($bedrijf) && isset($activiteit) && isset($locatie) && isset($contact)) {
@@ -73,8 +72,7 @@ function submit($vragen)
                 $statement->execute();
                 
             }
-            header("Location: index.php");
-            exit;
+            echo "<script> alert('Predikaat has been submitted');</script>";
         }
     }
 }
