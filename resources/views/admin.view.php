@@ -1,4 +1,5 @@
 <?php require_once '../admin/index.php' ?>
+<div class="pt-24">
 <h1 class="text-6xl font-extrabolt justify-self-center">Admin</h1>
 <a href='index.php?page=predikaat' class='mx-4 p-5 bg-[#19486A] text-white rounded-lg'><- terug</a>
         <table class='border-2 border-black border-solid p-8 justify-self-center'>
@@ -21,3 +22,4 @@
             <input type=submit value="Enter" class="px-24 p-2 rounded ml-8 bg-[#19486A] text-white text-lg" name="enter"></br>
         </form>
         <?php insertText($vragen); ?>
+</div>
