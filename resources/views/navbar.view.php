@@ -30,7 +30,7 @@
         <hr>
         <a href="#Events" class="text-3xl font-bold">Events & Agenda</a>
         <hr>
-        <a href="#Predikaat" class="text-3xl font-bold">Predikaat</a>
+        <a href="index.php?page=predikaat" class="text-3xl font-bold">Predikaat</a>
         <hr>
         <a href="#Contacts" class="text-3xl font-bold">Contact</a>
         <hr>
