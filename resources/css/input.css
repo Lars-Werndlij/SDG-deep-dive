@@ -24,3 +24,32 @@ roboto {
 body {
     color: #071E4B;
 }
+
+@keyframes carousel-animation {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+#carousel {
+    display: flex;
+    animation: carousel-animation 5s linear infinite;
+}
+
+/* Tablet: slower animation */
+@media (min-width: 768px) and (max-width: 1023px) {
+    #carousel {
+        animation-duration: 15s;
+    }
+}
+
+/* Desktop: slower and smoother animation */
+@media (min-width: 1024px) {
+    #carousel {
+        animation-duration: 10s;
+    }
+}

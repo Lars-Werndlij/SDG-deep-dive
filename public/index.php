@@ -1,7 +1,7 @@
 <?php require_once '../config.php' ?>
 <?php require_once '../lib/helper.php' ?>
 <!DOCTYPE html>
-<html lang="<?= $_ENV['LANGUAGE'] ?>">
+<html lang="<?= $_ENV['LANGUAGE'] ?>" class="scroll-smooth">
 
 <head>
     <meta charset="UTF-8">

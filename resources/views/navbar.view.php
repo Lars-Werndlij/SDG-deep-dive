@@ -1,6 +1,6 @@
-<nav class="h-16 lg:h-24 p-2 drop-shadow-lg bg-white w-full fixed">
+<nav class="h-16 lg:h-24 p-2 drop-shadow-lg bg-white w-full fixed z-50">
     <div class="flex justify-between h-full">
-        <img src="images/P17_Horizontaal_Logo_Kleur_RGB.svg" alt="LogoHorizontal">
+        <img src="images/P17_Horizontaal_Logo_Kleur_RGB.svg" alt="LogoHorizontal" onclick="location.href='#Landing'">
         <div class="flex items-center lg:pr-4">
             <div class="hidden lg:block pr-8">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
@@ -17,21 +17,22 @@
 
 <div id="menu" class="fixed w-80 inset-y-0 right-0 z-50 bg-gray-200 bg-opacity-95 transform translate-x-full transition-transform duration-300">
     <div class="flex justify-between items-center bg-white p-2 h-16 lg:h-24">
-        <img src="images/P17_Wordmark_Kleur_RGB.svg" alt="LogoHorizontal" class="h-16">
+        <a href="#Landing">
+            <img src="images/P17_Wordmark_Kleur_RGB.svg" alt="LogoHorizontal" class="h-16">
+        </a>
     </div>
+
     <div class="flex flex-col items-center space-y-4 mt-16">
         <hr>
-        <a href="#" class="text-3xl font-bold">Over Ons</a>
+        <a href="#Over-Ons" class="text-3xl font-bold">Over Ons</a>
         <hr>
-        <a href="#" class="text-3xl font-bold">SDG Houses</a>
+        <a href="#SDG-Houses" class="text-3xl font-bold">SDG Houses</a>
         <hr>
-        <a href="#" class="text-3xl font-bold">SDG Partners</a>
+        <a href="#Events" class="text-3xl font-bold">Events & Agenda</a>
         <hr>
-        <a href="#" class="text-3xl font-bold">Events & Agenda</a>
+        <a href="#Predikaat" class="text-3xl font-bold">Predikaat</a>
         <hr>
-        <a href="#" class="text-3xl font-bold">Predikaat</a>
-        <hr>
-        <a href="#" class="text-3xl font-bold">Contact</a>
+        <a href="#Contacts" class="text-3xl font-bold">Contact</a>
         <hr>
         <div class="lg:hidden flex justify-center items-center">
             <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="size-7">
