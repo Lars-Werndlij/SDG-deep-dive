@@ -19,7 +19,7 @@
                 </div>
 
                 <div class="font-bold text-slate-300 rounded-full bg-[#071E4B] hover:bg-[#09255d] flex items-center justify-center font-mono" style="height: 45px; width: 45px;">
-                    <a href="https://www.instagram.com/" target="_blank" rel="noopener noreferrer">
+                    <a href="https://www.instagram.com/sdg_house_plein17/" target="_blank" rel="noopener noreferrer">
                         <span class="[&>svg]:h-5 [&>svg]:w-5">
                             <svg
                                 xmlns="http://www.w3.org/2000/svg"
